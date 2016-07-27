@@ -1,7 +1,63 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <h3>helloworld</h3>
-  
-  </body>
+<body>
+	<div data-role="page">
+		<div data-role="header">
+			<h1>新乡学院问卷调查表</h1>
+		</div>
+		
+			
+				<form>
+					<div style="padding:10px 20px;">
+						
+						<input name="user" id="un" value="" placeholder="请输入你的姓名" type="text">
+						<fieldset id="sex" data-role="controlgroup">
+					<legend>请选择你的性别：</legend>
+					<div data-role="controlgroup" data-type="horizontal">
+					<input type="radio" name="radio-choice" id="radio-choice-1" value="男性"/>
+				<label for="radio-choice-1">男性</label>
+				<input type="radio" name="radio-choice" id="radio-choice-2" value="女性" />
+				<label for="radio-choice-2">女性</label>
+			
+　 				<select name="select" id="select" data-native-menu="flase">
+　　 				<option value="please">请选择您的专业：</option>
+					<option value="choice1">计算机科学与技术</option>
+　　 				<option value="choice2">计算机应用技术</option>
+　　 				<option value="choice3">信息管理</option>
+　　 				<option value="choice4">互联网工程</option>
+									 
+　  			</select>
+			</div>
+					</div>
+					<input id="phone num" name="phone num" placeholder="请输入你的电话号码" pattern="(\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$" required="required" type="text" data-clear-btn="true"/> 
+
+				</form>
+				<div style="padding:1px 5px;">
+			<legend>邮箱：</legend>
+			<input id="email" name="email" placeholder="请输入你的邮箱" data-type="horizontal"data-clear-btn="true">
+			<select name="select" id="select" data-native-menu="true" data-inline="true">
+　　 				<option value="choice1">@qq.com</option>
+　　 				<option value="choice2">@sina.com</option>
+　　 				<option value="choice3">@126.com</option>
+　　 				<option value="choice4">@163.com</option>
+</div>
+	
+	<h3>主页</h3>
+	<input id="zhuye" name="主页" placeholder="你的个人主页" value="" type="text">
+	
+	</label><input data-clear-btn="true" id="入学日期" type="date" value="2016-03-15"/>
+	
+	<select name="select" id="select" data-native-menu="true">
+	
+	<label>你对学校那个部门比较满意?</label>
+				<select name="check" id="check" multiple data-native-menu="false">
+						<option value="1">财务处</option>
+						<option value="2">教务处</option>
+						<option value="3">保卫科</option>					
+						<option value="4">后勤管理中心</option>
+						<option value="5">设备中心</option>	
+				</select>
+</div>
+</body>
+</html>
 </html>
