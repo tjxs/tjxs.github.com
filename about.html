@@ -1,28 +1,128 @@
-<body>
-  <div data-role="page">
-    <div data-role="header">
-      <a href="home.php" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-notext">主页</a>
-      <center><h1>About</h1></center>
-      <a href="" onclick="history.go(-1)" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-notext">后退</a>
-    </div>
 
-  <div data-role="main" class="ui-content">
-  
-    
-    <center><h2>Musci Player</h2></center>
-	
-	<div data-role="content">
-        	<ul data-role="listview" data-inset="true">
-			<li>2013052202</li>
-			<li>tjxs</li>
-			<li>2013级计算机科学与技术2班</li>
-			<li>移动应用开发</li>
-			</ul>
-        </div>
-  </div>
-    <div data-role="footer" style="text-align:center; font-size:12px;color:rgb(153,153,153);line-height:22px;font-family: arial;">
-        &copy;计算机与信息工程学院
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>音乐模式 - Aes.V茶会</title>
+<meta name="keywords" content="Aes.V茶会论坛 动漫交流 动漫资讯 动漫资源 Aes.V" />
+<meta name="description" content="Aes.V茶会动漫论坛是二次元动漫分享交流的乐园  动漫新闻 动漫下载 动漫音乐 动漫图片 动漫资源 动漫分享平台-Aes.V茶会动漫论坛  Aes.V" />
+<meta name="generator" content="cat_radio V1.0" />
+<meta name="author" content="cc @ lolimilk.com" />
+<meta name="copyright" content="cc @ lolimilk.com" />
+</head>
+
+<body>
+<link rel="stylesheet" type="text/css" href="source/plugin/cat_radio/template/css.css"/>
+<script src="source/plugin/cat_radio/js/js.js" type="text/javascript"></script> 
+<script type="text/javascript"> 
+window.onunload = function(){
+var IsMusicMode = true;
+document.getElementById("music").src ="";
+};
+window.onerror = function(){
+return true;
+};
+if(navigator.userAgent.indexOf("MSIE")>0){
+window.onbeforeunload = function(){
+}
+}else{
+window.onbeforeunload = function(){
+//		return("");
+}
+}
+function mainpage(){
+if(navigator.userAgent.indexOf("MSIE")>0){
+var x1 = document.getElementById("music");
+document.getElementById("playerbox").removeChild(x1);
+}
+window.location.href="http://www.aesv.cc/";
+}
+var calcHeight = function() {
+$("#base").height($(window).height());
+      }
+      $(document).ready(function() {
+        calcHeight();
+      });
+      $(window).resize(function() {
+        calcHeight();
+      }).load(function() {
+        calcHeight();
+      });
+</script> 
+<script src="source/plugin/cat_radio/js/jq.js" type="text/javascript"></script> 
+<script src="source/plugin/cat_radio/js/ease.js" type="text/javascript"></script> 
+<script type="text/javascript"> 
+var _$ = ["#btn_open", "+=495px", "easeInOutCubic", "#btn_recyle", "#player", "-495px", "easeInOutCubic", "#btn_playlist1", "#music", "src", "http://www.xiami.com/res/player/xiamiMusicPlayer_ld.swf?dataUrl=/song/playlist/id/120219658/type/3", "#btn_playlist2", "#music", "src", "http://www.xiami.com/res/player/xiamiMusicPlayer_ld.swf?dataUrl=/song/playlist/id/4391299/type/3", "#btn_playlist3", "#music", "src", "http://www.xiami.com/res/player/xiamiMusicPlayer_ld.swf?dataUrl=/song/playlist/id/13671825/type/3"];
+var uiod3fc9e = 0x1;
+var uioda8778 = 0x1;
+jQuery(window["document"])["ready"](function($) {
+    $(_$[0])["click"](function() {//出现
+        if (uiod3fc9e == 0x1) {
+            $(_$[4])["animate"]({
+                "left": _$[1]
+            },
+            0xfa, _$[2]);
+$("#btn_open p").css('transform','rotate(180deg)');
+uiod3fc9e = 0x0
+        }else{
+$(_$[4])["animate"]({
+            "left": _$[5]
+},
+0xfa, _$[6]);
+$("#btn_open p").css('transform','rotate(0deg)');
+uiod3fc9e = 0x1
+}
+    });
+    $(_$[3])["click"](function() {//收回
+        $(_$[4])["animate"]({
+            "left": _$[5]
+        },
+        0xfa, _$[6]);
+$("#btn_open p").css('transform','rotate(0deg)');
+        uiod3fc9e = 0x1
+    });
+    $(_$[7])["click"](function() {//本期推荐
+        if (uioda8778 != 0x1) {
+            $(_$[8])["attr"](_$[9], _$[10]);
+            uioda8778 = 0x1
+        }
+    });
+    $(_$[11])["click"](function() {//过期推荐
+        if (uioda8778 != 0x2) {
+            $(_$[12])["attr"](_$[13], _$[14]);
+            uioda8778 = 0x2
+        }
+    });
+    $(_$[15])["click"](function() {//新歌推荐
+        if (uioda8778 != 0x3) {
+            $(_$[16])["attr"](_$[17], _$[18]);
+            uioda8778 = 0x3
+        }
+    })
+});
+
+</script> 
+   <iframe id="base" src="http://www.aesv.cc/" name="preview-frame" frameborder="0" noresize="noresize"> 
+   </iframe> 
+   
+<div id="player">
+    <div id="playerbtn">
+        <div id="btn_recyle" class="player_btn"></div>
+        <div id="btn_exit" class="player_btn" onclick="mainpage()"></div>    
+        <div id="btn_open" style="height: 56px;width: 40px;position: absolute;right: 0;top:2px;margin: 0;cursor:pointer;background-color:#192938">
+<p id="dd" style="text-align:center;font-size:24px;font-weight:bold;line-height:56px;margin:0;transform-origin:50% 50%">></p>
+</div>    
+
     </div>
-  </div>
+    <div id="playerbox"> 
+        <iframe id="music" src="http://www.xiami.com/res/player/xiamiMusicPlayer_ld.swf?dataUrl=/song/playlist/id/120955526/type/3" width="491" height="510" allowtransparency="true" scrolling="no">
+        </iframe> 
+    </div> 
+    <div id="listselect">
+        <div id="btn_playlist1" class="player_btn"></div>
+        <div id="btn_playlist2" class="player_btn"></div>
+        <div id="btn_playlist3" class="player_btn"></div>
+        <div class="player_btn"><a href="http://www.xiami.com/collect/120219658?success=2" target="_blank"><img src="source/plugin/cat_radio/template/dl.png" border="0" /></a></div>
+    </div>
+</div>
 </body>
 </html>
